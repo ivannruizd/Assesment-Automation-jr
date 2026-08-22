@@ -1,7 +1,7 @@
 # Machine Control Panel
 
 > [!WARNING]
-> **Importante sobre el archivo `.env`:** Al crear tu archivo de variables de entorno, asegúrate de verificar y colocar el Host correcto (ej. `DB_HOST`, `API_HOST`, etc.). Por defecto, la configuración puede apuntar a un host distinto, lo que ocasionará problemas de conexión al levantar el proyecto.
+> **Important Note on the `.env` file:** When creating your environment variables file, make sure to verify and use the correct Host (e.g., `localhost` instead of `127.0.0.1`). By default, incorrect host configurations can cause connection blocks between the frontend and the backend when launching the project.
 
 A small full-stack web application that simulates a machine control panel.
 
