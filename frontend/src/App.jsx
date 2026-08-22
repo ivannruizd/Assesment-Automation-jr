@@ -53,7 +53,7 @@ export default function App() {
     try {
       const res = await fetch(`${API_URL}/motor/${speed}`, { method: 'POST' });
       if (res.ok) {
-        // here we update the motor speed only if the backend responds with 200 OK as in the orher functions
+        // here we update the motor speed only if the backend responds with 00 OK as in the orher functions
         setMotorSpeed(speed);
       }
     } catch (error) {
@@ -218,7 +218,6 @@ function MotorVisualization({ speed }) {
     </svg>
   );
 }
-#visual representation of the valve
 function ValveVisualization({ isOpen }) {
   return (
     <svg viewBox="0 0 200 150" className="svg-valve">
