@@ -288,3 +288,26 @@ The backend simulates the machine state in memory. No physical motor or valve is
 The ambient temperature is retrieved from an external API rather than being simulated.
 
 For a production industrial system, the simulated control layer could later be connected to a PLC using an appropriate industrial communication protocol such as OPC UA or Modbus TCP.
+
+## How to View the Project
+
+Once you have both servers (Frontend and Backend) running in your separate terminals, you can access the application using the following links:
+
+1. View the Application (Frontend HMI)
+Open your web browser and navigate to this address to see the running control panel:
+http://localhost:5173 
+
+2. Verify the API (Backend)
+To verify that the Python backend is running independently and sending data, open this link:
+http://localhost:8001/api/state
+
+--------------------------------------------------
+
+## Important Note on the .env file
+
+If the frontend cannot connect to the backend (shows "SYSTEM OFFLINE"), make sure your environment variables are set up correctly:
+
+1. Location: The .env file MUST be located inside the "frontend" folder (at the exact same level as package.json). Do not place it in the root directory of the project.
+2. Host URL: Pay close attention to the Host URL. By default, it might change to a different host (like 127.0.0.1 instead of localhost), which can cause connection blocks. Your .env file should contain exactly this line:
+   VITE_API_URL=http://localhost:8001/api
+3. Restart: If you just created or modified the .env file, you must restart your frontend server for the changes to take effect (press Ctrl + C in the terminal, then run npm run dev again).
