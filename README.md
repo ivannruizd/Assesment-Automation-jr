@@ -1,5 +1,8 @@
 # Machine Control Panel
 
+> [!WARNING]
+> **Importante sobre el archivo `.env`:** Al crear tu archivo de variables de entorno, asegúrate de verificar y colocar el Host correcto (ej. `DB_HOST`, `API_HOST`, etc.). Por defecto, la configuración puede apuntar a un host distinto, lo que ocasionará problemas de conexión al levantar el proyecto.
+
 A small full-stack web application that simulates a machine control panel.
 
 The project uses a Python/FastAPI backend and a React frontend. The backend maintains the simulated machine state, while the frontend works as a web-based HMI for monitoring and control.
